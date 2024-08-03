@@ -1,99 +1,117 @@
-# Password Manager
+## Password Manager
 
-## Overview
+### Overview
+This Password Manager application helps you securely manage and store your passwords. It features both a Command-Line Interface (CLI) and a Graphical User Interface (GUI) for ease of use. The application uses encryption to secure your passwords and includes functionalities such as user registration, password storage, password retrieval, and more.
 
-This Password Manager is a command-line tool that allows users to securely store and manage their passwords. It uses encryption to protect passwords and offers features like user registration, authentication, password management, and database backup/restore.
+---
 
-## Features
+### Command-Line Interface (CLI)
 
-- **User Registration**: Allows users to sign up with a name, email, phone number, username, and password.
-- **User Authentication**: Validates user credentials and provides access to the password manager.
-- **Password Management**:
-  - Add new passwords
-  - View all stored passwords
-  - Update existing passwords
-  - Delete passwords
-  - Search passwords by service or username
-- **Password Generation**: Generate random passwords of specified length.
-- **Database Management**:
-  - Backup the database to a file
-  - Restore the database from a backup file
-- **Password Strength Checker**: Checks the strength of passwords based on length and complexity.
+#### Features
+- **User Registration:** Register a new user with name, email, phone number, username, and password.
+- **User Authentication:** Log in with a username and password.
+- **Password Management:** Add, view, update, delete, and search for passwords.
+- **Password Generation:** Generate random passwords with customizable length.
+- **Database Backup and Restore:** Backup the database to a file and restore from a backup.
+- **Password Strength Checker:** Evaluate the strength of passwords to ensure they meet security requirements.
 
-## Technologies Used
-
-- **Python**: Programming language used to implement the application.
-- **SQLite**: Database used to store user and password data.
-- **Cryptography**: Used for password encryption and decryption.
-- **ANSI Color Codes**: For adding color to console output.
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- `cryptography` library (Install via `pip install cryptography`)
-
-### Installation
-
-1. Clone the repository:
+#### CLI Usage
+1. **Run the Application:**
     ```bash
-    git clone https://github.com/your-username/password-manager.git
+    python password_manager.py
     ```
-2. Navigate to the project directory:
+2. **Choose an Option:**
+    - Sign Up: Register a new user.
+    - Login: Authenticate and access the main menu.
+    - Exit: Close the application.
+
+3. **Main Menu Options:**
+    - Add a new password
+    - View all passwords
+    - Update a password
+    - Delete a password
+    - Search for passwords
+    - Generate a random password
+    - Backup database
+    - Restore database
+    - Exit
+
+#### CLI Commands
+- **Generate Encryption Key:**
     ```bash
-    cd password-manager
+    python -c "from password_manager import generate_key; generate_key()"
+    ```
+- **Backup Database:**
+    ```bash
+    python -c "from password_manager import backup_database; backup_database()"
+    ```
+- **Restore Database:**
+    ```bash
+    python -c "from password_manager import restore_database; restore_database('backup_filename.db')"
     ```
 
-3. Install the required dependencies:
+---
+
+### Graphical User Interface (GUI)
+
+#### Features
+- **User-Friendly Interface:** Easy-to-navigate interface with graphical elements.
+- **Password Management:** Add, view, update, and delete passwords.
+- **Password Generation:** Generate strong passwords directly from the interface.
+- **Database Operations:** Backup and restore the database through graphical options.
+
+#### GUI Usage
+1. **Run the Application:**
+    ```bash
+    python gui_password_manager.py
+    ```
+2. **Interface Navigation:**
+    - **Sign Up / Log In:** Access registration or login forms.
+    - **Main Menu:** Navigate to various password management features.
+    - **Password Management:** Use graphical forms to manage passwords.
+
+3. **Options Available:**
+    - Add, View, Update, Delete passwords
+    - Generate passwords
+    - Backup and Restore database
+
+---
+
+### Getting Started
+
+1. **Install Dependencies:**
+    Make sure you have the required libraries installed. You can use `pip` to install them:
     ```bash
     pip install cryptography
     ```
 
-### Usage
+2. **Initialize Database:**
+    The database will be initialized automatically when running the application for the first time.
 
-1. **Initialize the database and generate a key (if not already present):**
+3. **Generate Key:**
+    A secret key will be generated for encryption if it does not already exist:
     ```bash
-    python password_manager.py
+    python -c "from password_manager import generate_key; generate_key()"
     ```
 
-2. **Run the application:**
-    ```bash
-    python password_manager.py
-    ```
+4. **Run the Application:**
+    - For CLI:
+        ```bash
+        python password_manager.py
+        ```
+    - For GUI:
+        ```bash
+        python gui_password_manager.py
+        ```
 
-3. **Follow the on-screen prompts to use the application:**
-    - **Sign Up**: Register a new user.
-    - **Login**: Log in to the application.
-    - **Main Menu**: Access password management features, backup/restore options, and more.
+---
 
-### Commands
+### Contributing
 
-- **Sign Up**: Register a new user with required details.
-- **Login**: Authenticate with your username and password.
-- **Add a New Password**: Store a new password for a specific service.
-- **View All Passwords**: List all passwords stored for the logged-in user.
-- **Update a Password**: Modify an existing password entry.
-- **Delete a Password**: Remove a password entry.
-- **Search for Passwords**: Search passwords by service name or username.
-- **Generate a Random Password**: Create a random password of desired length.
-- **Backup Database**: Create a backup of the current database.
-- **Restore Database**: Restore the database from a backup file.
+Feel free to contribute to the project by submitting issues, feature requests, or pull requests. Please follow the project's code style and guidelines.
 
-## Contributing
+---
 
-Feel free to contribute to this project by submitting issues, pull requests, or suggestions.
-
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [Cryptography Library](https://cryptography.io/)
-- Python and its community for providing a robust platform for development.
-
-## Contact
-
-For any questions or feedback, you can reach me at: [your-email@example.com]
-
