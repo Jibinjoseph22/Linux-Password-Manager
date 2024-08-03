@@ -18,7 +18,7 @@ This Password Manager application helps you securely manage and store your passw
 #### CLI Usage
 1. **Run the Application:**
     ```bash
-    python password_manager.py
+    python3 password_manager.py
     ```
 2. **Choose an Option:**
     - Sign Up: Register a new user.
@@ -39,15 +39,15 @@ This Password Manager application helps you securely manage and store your passw
 #### CLI Commands
 - **Generate Encryption Key:**
     ```bash
-    python -c "from password_manager import generate_key; generate_key()"
+    python3 -c "from password_manager import generate_key; generate_key()"
     ```
 - **Backup Database:**
     ```bash
-    python -c "from password_manager import backup_database; backup_database()"
+    python3 -c "from password_manager import backup_database; backup_database()"
     ```
 - **Restore Database:**
     ```bash
-    python -c "from password_manager import restore_database; restore_database('backup_filename.db')"
+    python3 -c "from password_manager import restore_database; restore_database('backup_filename.db')"
     ```
 
 ---
@@ -63,7 +63,7 @@ This Password Manager application helps you securely manage and store your passw
 #### GUI Usage
 1. **Run the Application:**
     ```bash
-    python gui_password_manager.py
+    python3 gui_password_manager.py
     ```
 2. **Interface Navigation:**
     - **Sign Up / Log In:** Access registration or login forms.
@@ -91,17 +91,17 @@ This Password Manager application helps you securely manage and store your passw
 3. **Generate Key:**
     A secret key will be generated for encryption if it does not already exist:
     ```bash
-    python -c "from password_manager import generate_key; generate_key()"
+    python3 -c "from password_manager import generate_key; generate_key()"
     ```
 
 4. **Run the Application:**
     - For CLI:
         ```bash
-        python password_manager.py
+        python3 password_manager.py
         ```
     - For GUI:
         ```bash
-        python gui_password_manager.py
+        python3 gui_password_manager.py
         ```
 
 ---
