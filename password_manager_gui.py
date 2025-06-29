@@ -123,6 +123,8 @@ def main_menu():
         add_password_window = tk.Toplevel()
         add_password_window.title("Add Password")
 
+
+        
         # Styling
         add_password_window.configure(bg="black")
         add_password_window.geometry("400x300")
