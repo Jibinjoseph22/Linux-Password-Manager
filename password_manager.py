@@ -8,6 +8,7 @@ from datetime import datetime
 from cryptography.fernet import Fernet, InvalidToken
 import re
 
+
 # ANSI color codes
 class colors:
     HEADER = '\033[95m'
