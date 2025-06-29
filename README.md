@@ -13,7 +13,7 @@ This Password Manager application helps you securely manage and store your passw
 - **Password Management:** Add, view, update, delete, and search for passwords.
 - **Password Generation:** Generate random passwords with customizable length.
 - **Database Backup and Restore:** Backup the database to a file and restore from a backup.
-- **Password Strength Checker:** Evaluate the strength of passwords to ensure they meet security requirements.
+- **Password Strength Checker:** Evaluate the strength of passwords to ensure they meet security requirements
 
 #### CLI Usage
 1. **Run the Application:**
